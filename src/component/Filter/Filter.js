@@ -2,7 +2,6 @@ const Filter = ({ filter, onFilterChange }) => {
   const onChange = e => {
     onFilterChange(e.target.value);
   };
-
   return (
     <label>
       Find contacts by name 🔍

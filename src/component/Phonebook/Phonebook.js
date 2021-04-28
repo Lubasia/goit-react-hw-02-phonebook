@@ -55,14 +55,14 @@ class Phonebook extends Component {
         <h1> Phonebook ☎️ </h1>
         <Form addContact={this.addContact} />
         <h2> Contacts </h2>
-        {visibleContacts.length > 1 && (
-          <Filter value={filter} onFilterChange={this.onFilterChange} />
-        )}
-        {visibleContacts.length > 0 && (
+        <Filter value={filter} onFilterChange={this.onFilterChange} />
+        {visibleContacts.length > 0 ? (
           <ContactList
             contact={visibleContacts}
             onDeleteContact={this.onDeleteContact}
           />
+        ) : (
+          <h3> No Contacts 🙁 </h3>
         )}
       </div>
     );
